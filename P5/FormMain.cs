@@ -104,5 +104,19 @@ namespace P5
             newIssue.ShowDialog();
             newIssue.Dispose();
         }
+
+        private void issuesModifyToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormModifyIssue mdfyIssue = new FormModifyIssue(currentProjectid);
+            mdfyIssue.ShowDialog();
+            mdfyIssue.Dispose();
+        }
+
+        private void issuesRemoveToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormRemoveIssue rmv = new FormRemoveIssue(currentProjectid);
+            rmv.ShowDialog();
+            rmv.Dispose();
+        }
     }
 }

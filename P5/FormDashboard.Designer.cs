@@ -52,7 +52,7 @@
             // numIssue
             // 
             this.numIssue.AutoSize = true;
-            this.numIssue.Location = new System.Drawing.Point(231, 46);
+            this.numIssue.Location = new System.Drawing.Point(241, 46);
             this.numIssue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.numIssue.Name = "numIssue";
             this.numIssue.Size = new System.Drawing.Size(27, 20);

@@ -138,12 +138,14 @@
             this.issuesModifyToolStripMenuItem.Name = "issuesModifyToolStripMenuItem";
             this.issuesModifyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.issuesModifyToolStripMenuItem.Text = "&Modify";
+            this.issuesModifyToolStripMenuItem.Click += new System.EventHandler(this.issuesModifyToolStripMenuItem_Click);
             // 
             // issuesRemoveToolStripMenuItem
             // 
             this.issuesRemoveToolStripMenuItem.Name = "issuesRemoveToolStripMenuItem";
             this.issuesRemoveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.issuesRemoveToolStripMenuItem.Text = "R&emove";
+            this.issuesRemoveToolStripMenuItem.Click += new System.EventHandler(this.issuesRemoveToolStripMenuItem_Click);
             // 
             // issuesReportToolStripMenuItem
             // 

@@ -37,27 +37,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(25, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 25);
+            this.label1.Size = new System.Drawing.Size(97, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Project Name:";
             // 
             // textBoxProjectName
             // 
-            this.textBoxProjectName.Location = new System.Drawing.Point(194, 70);
-            this.textBoxProjectName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxProjectName.Location = new System.Drawing.Point(129, 45);
             this.textBoxProjectName.Name = "textBoxProjectName";
-            this.textBoxProjectName.Size = new System.Drawing.Size(534, 31);
+            this.textBoxProjectName.Size = new System.Drawing.Size(357, 22);
             this.textBoxProjectName.TabIndex = 1;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(566, 167);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonAdd.Location = new System.Drawing.Point(377, 107);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(164, 53);
+            this.buttonAdd.Size = new System.Drawing.Size(109, 34);
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -66,10 +63,9 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(327, 167);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonCancel.Location = new System.Drawing.Point(218, 107);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(164, 53);
+            this.buttonCancel.Size = new System.Drawing.Size(109, 34);
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -78,15 +74,14 @@
             // FormCreateProject
             // 
             this.AcceptButton = this.buttonAdd;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(834, 294);
+            this.ClientSize = new System.Drawing.Size(556, 188);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.textBoxProjectName);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormCreateProject";
             this.Text = "Create Project";
             this.Load += new System.EventHandler(this.PreferenceCreateProject_Load);

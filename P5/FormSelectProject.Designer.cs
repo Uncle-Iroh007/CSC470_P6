@@ -44,7 +44,7 @@
             // 
             // buttonSelectProject
             // 
-            this.buttonSelectProject.Location = new System.Drawing.Point(406, 317);
+            this.buttonSelectProject.Location = new System.Drawing.Point(407, 317);
             this.buttonSelectProject.Name = "buttonSelectProject";
             this.buttonSelectProject.Size = new System.Drawing.Size(160, 37);
             this.buttonSelectProject.TabIndex = 1;
@@ -63,7 +63,7 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // PreferenceSelectProject
+            // FormSelectProject
             // 
             this.AcceptButton = this.buttonSelectProject;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -73,7 +73,7 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSelectProject);
             this.Controls.Add(this.listBoxProjects);
-            this.Name = "PreferenceSelectProject";
+            this.Name = "FormSelectProject";
             this.Text = "Select Project";
             this.Load += new System.EventHandler(this.PreferenceSelectProject_Load);
             this.ResumeLayout(false);
