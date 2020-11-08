@@ -7,6 +7,11 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        /*private void InitializeComponent()
+        {
+            this.Load += new System.EventHandler(this.FormRemoveIssue_Load);
+        }*/
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -45,6 +50,7 @@
             // 
             this.issuesList.AllowUserToAddRows = false;
             this.issuesList.AllowUserToDeleteRows = false;
+            this.issuesList.AllowUserToResizeColumns = false;
             this.issuesList.AllowUserToResizeRows = false;
             this.issuesList.ColumnHeadersHeight = 29;
             this.issuesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -56,6 +62,7 @@
             this.intiDesc,
             this.comp,
             this.stat});
+            this.issuesList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.issuesList.Location = new System.Drawing.Point(12, 12);
             this.issuesList.MultiSelect = false;
             this.issuesList.Name = "issuesList";
@@ -63,6 +70,7 @@
             this.issuesList.RowHeadersWidth = 51;
             this.issuesList.RowTemplate.Height = 24;
             this.issuesList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.issuesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.issuesList.Size = new System.Drawing.Size(1151, 393);
             this.issuesList.TabIndex = 0;
             // 
@@ -130,6 +138,7 @@
             this.selIss.TabIndex = 1;
             this.selIss.Text = "Select Issue";
             this.selIss.UseVisualStyleBackColor = true;
+            this.selIss.Click += new System.EventHandler(this.selIss_Click);
             // 
             // cnclSel
             // 
@@ -150,6 +159,7 @@
             this.Controls.Add(this.issuesList);
             this.Name = "FormRemoveIssue";
             this.Text = "Remove Issue";
+            this.Load += new System.EventHandler(this.FormRemoveIssue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.issuesList)).EndInit();
             this.ResumeLayout(false);
 
@@ -158,6 +168,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView issuesList;
+        private System.Windows.Forms.Button selIss;
+        private System.Windows.Forms.Button cnclSel;
         private System.Windows.Forms.DataGridViewTextBoxColumn isId;
         private System.Windows.Forms.DataGridViewTextBoxColumn issTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn discDate;
@@ -165,7 +177,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn intiDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn comp;
         private System.Windows.Forms.DataGridViewTextBoxColumn stat;
-        private System.Windows.Forms.Button selIss;
-        private System.Windows.Forms.Button cnclSel;
+
     }
-}
+
+    }

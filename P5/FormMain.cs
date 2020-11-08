@@ -114,9 +114,15 @@ namespace P5
 
         private void issuesRemoveToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormRemoveIssue rmv = new FormRemoveIssue(currentProjectid);
-            rmv.ShowDialog();
-            rmv.Dispose();
+            FormRemoveIssue rmvIss = new FormRemoveIssue(currentProjectid);
+            rmvIss.ShowDialog();
+            //DialogResult rmSuccess = rmvIss.DialogResult;
+            if(rmvIss.DialogResult == DialogResult.Cancel)
+            {
+
+                MessageBox.Show("Remove Canceled","Attention");
+            }
+            rmvIss.Dispose();
         }
     }
 }

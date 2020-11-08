@@ -100,7 +100,7 @@ namespace Builder
             List<Issue> allIssues = new List<Issue>();
             FormSelectProject myProject = new FormSelectProject();
 
-            int pId = myProject._SelectedProjectId;
+            int pId = ProjectId;
 
 
 
@@ -108,7 +108,7 @@ namespace Builder
             {
                 if (a.project_id == pId)
                 {
-                    allIssues.Append(a);
+                    allIssues.Add(a);
 
                 }
             }
@@ -125,6 +125,7 @@ namespace Builder
                 {
                     _Issues.RemoveAt(index);
                     success = true;
+                    break;
                 }
 
                 index++;
