@@ -143,13 +143,15 @@ namespace Builder
             bool errorFlag = false;
             if (string.IsNullOrEmpty(validation) == false)
             {
-
-                foreach (Issue iss in _Issues)
+                if (validation.Equals("Title Already Exists."))
                 {
-                    if (iss.Title.Equals(issue.Title) && iss.id != issue.id)
+                    foreach (Issue iss in _Issues)
                     {
-                        errorFlag = true;
-                        break;
+                        if (iss.Title.Equals(issue.Title) && iss.id != issue.id)
+                        {
+                            errorFlag = true;
+                            break;
+                        }
                     }
                 }
 
