@@ -139,26 +139,42 @@ namespace Builder
         public string Modify(Issue issue) {
 
             string validation = this.ValidateIssue(issue);
-         
-            if(string.IsNullOrEmpty(validation) == false)
+
+            bool errorFlag = false;
+            if (string.IsNullOrEmpty(validation) == false)
             {
-                return validation;
+
+                foreach (Issue iss in _Issues)
+                {
+                    if (iss.Title.Equals(issue.Title) && iss.id != issue.id)
+                    {
+                        errorFlag = true;
+                        break;
+                    }
+                }
+
+            }
+            if (!errorFlag)
+            {
+
+
+                Issue myIssue = _Issues.Where(Issue => Issue.id == issue.id).First();
+                int index = _Issues.IndexOf(myIssue);
+
+                _Issues.ElementAt(index).id = issue.id;
+                _Issues.ElementAt(index).project_id = issue.project_id;
+                _Issues.ElementAt(index).Title = issue.Title;
+                _Issues.ElementAt(index).Discoverer = issue.Discoverer;
+                _Issues.ElementAt(index).DiscoveryDate = issue.DiscoveryDate;
+                _Issues.ElementAt(index).Component = issue.Component;
+                _Issues.ElementAt(index).IssueStatusid = issue.IssueStatusid;
+                _Issues.ElementAt(index).initialDescription = issue.initialDescription;
+
+                return NO_ERROR;
             }
             else
             {
-                int index = 0;
-                foreach (Issue iss in _Issues)
-                {
-                    if (iss.project_id == issue.project_id)
-                    {
-
-                        _Issues[index] = issue;
-                    }
-
-                    index++;
-                }
-
-                return NO_ERROR;
+                return validation;
             }
         
         }

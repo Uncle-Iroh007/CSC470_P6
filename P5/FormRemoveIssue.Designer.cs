@@ -148,6 +148,7 @@
             this.cnclSel.TabIndex = 2;
             this.cnclSel.Text = "Cancel";
             this.cnclSel.UseVisualStyleBackColor = true;
+            this.cnclSel.Click += new System.EventHandler(this.cnclSel_Click);
             // 
             // FormRemoveIssue
             // 

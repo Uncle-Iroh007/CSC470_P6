@@ -69,38 +69,51 @@ namespace Builder
 
         private void crtIssue_Click(object sender, EventArgs e)
         {
-            Issue newIssue = new Issue();
-            FakeIssueStatusRepository iss = new FakeIssueStatusRepository();
-            FakeIssueRepository new_Iss = new FakeIssueRepository();
+            
 
-            newIssue.id = Int32.Parse(this.Iss_Id.Text);
-            newIssue.project_id = currentProjectId;
-            newIssue.Discoverer = this.discoverers.Text;
-            newIssue.Component = this.comp.Text;
-            newIssue.initialDescription = this.initDesc.Text;
-            newIssue.IssueStatusid = iss.GetIdByStatus(this.statuses.Text);
-            newIssue.DiscoveryDate = DateTime.ParseExact(this.disc_dateTime.Text, "hh:mm:ss tt d MMM yyyy",null);
-            newIssue.Title = this.titleBox.Text.Trim();
-
-            string res = new_Iss.Add(newIssue);
-
-            if(string.IsNullOrEmpty(res) == true)
+            if (string.IsNullOrEmpty(this.discoverers.Text))
             {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-
+                MessageBox.Show("A Discoverer must be selected.","Error!");
+            }
+            else if (string.IsNullOrEmpty(this.statuses.Text))
+            {
+                MessageBox.Show("A Status has to  be assigned.","Error!");
             }
             else
             {
-                MessageBox.Show(res,"Error !");
-                
-                //this.DialogResult = DialogResult.Cancel;
-                //this.DialogResult = DialogResult.Abort;
-                //this.Close();
+
+                Issue newIssue = new Issue();
+                FakeIssueStatusRepository iss = new FakeIssueStatusRepository();
+                FakeIssueRepository new_Iss = new FakeIssueRepository();
+
+                newIssue.id = Int32.Parse(this.Iss_Id.Text);
+                newIssue.project_id = currentProjectId;
+                newIssue.Discoverer = this.discoverers.Text;
+                newIssue.Component = this.comp.Text;
+                newIssue.initialDescription = this.initDesc.Text;
+                newIssue.IssueStatusid = iss.GetIdByStatus(this.statuses.Text);
+                newIssue.DiscoveryDate = DateTime.ParseExact(this.disc_dateTime.Text, "hh:mm:ss tt d MMM yyyy", null);
+                newIssue.Title = this.titleBox.Text.Trim();
+
+                string res = new_Iss.Add(newIssue);
+
+                if (string.IsNullOrEmpty(res) == true)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show(res, "Error !");
+
+                    //this.DialogResult = DialogResult.Cancel;
+                    //this.DialogResult = DialogResult.Abort;
+                    //this.Close();
+
+                }
 
             }
-
-            
         }
 
         private void cnclCreate_Click(object sender, EventArgs e)

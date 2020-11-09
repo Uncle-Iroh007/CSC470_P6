@@ -107,7 +107,7 @@ namespace P5
 
         private void issuesModifyToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormModifyIssue mdfyIssue = new FormModifyIssue(currentProjectid);
+            selectIssueToModify mdfyIssue = new selectIssueToModify(currentProjectid);
             mdfyIssue.ShowDialog();
             mdfyIssue.Dispose();
         }
@@ -116,11 +116,11 @@ namespace P5
         {
             FormRemoveIssue rmvIss = new FormRemoveIssue(currentProjectid);
             rmvIss.ShowDialog();
-            //DialogResult rmSuccess = rmvIss.DialogResult;
+           
             if(rmvIss.DialogResult == DialogResult.Cancel)
             {
 
-                MessageBox.Show("Remove Canceled","Attention");
+                MessageBox.Show("Remove Canceled!","Attention");
             }
             rmvIss.Dispose();
         }

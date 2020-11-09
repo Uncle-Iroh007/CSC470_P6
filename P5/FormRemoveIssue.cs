@@ -40,6 +40,12 @@ namespace Builder
 
         }
 
+        private void cnclSel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
         private void selIss_Click(object sender, EventArgs e)
         {
             if(this.issuesList.SelectedRows.Count == 0)
@@ -70,8 +76,9 @@ namespace Builder
                     
                     if(rmvSuccess == true)
                     {
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
+                        this.issuesList.Rows.RemoveAt(selectedIndex);
+                        //this.DialogResult = DialogResult.OK;
+                        //this.Close();
                     }
                     else
                     {
