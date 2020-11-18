@@ -80,7 +80,7 @@ namespace Builder
 
             string modifyResult = modify.Modify(modifiedIssue);
 
-            if(string.IsNullOrEmpty(modifyResult) == true)
+            if(string.IsNullOrEmpty(modifyResult))
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();

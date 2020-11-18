@@ -124,5 +124,46 @@ namespace P5
             }
             rmvIss.Dispose();
         }
+
+        private void createToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormCreateFeature newFeature = new FormCreateFeature(currentProjectid);
+            newFeature.ShowDialog();
+            newFeature.Dispose();
+        }
+
+        private void featureToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void createToolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            FormCreateRequirement newReq = new FormCreateRequirement(currentProjectid);
+            newReq.ShowDialog();
+            newReq.Dispose();
+        }
+
+        private void modifyToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormSelectFeature selectFeature = new FormSelectFeature(currentProjectid);
+            selectFeature.ShowDialog();
+            selectFeature.Dispose();
+
+        }
+
+        private void removeToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormSelectFeatureToRemove remFeature = new FormSelectFeatureToRemove(currentProjectid);
+            remFeature.ShowDialog();
+            remFeature.Dispose();
+        }
+
+        private void modifyToolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            FormSelectRequirementToModify myReq = new FormSelectRequirementToModify(currentProjectid);
+            myReq.ShowDialog();
+            myReq.Dispose();
+        }
     }
 }
